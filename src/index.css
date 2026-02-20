@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    @apply bg-gray-950 text-white;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-green-600 hover:bg-green-500 text-white font-bold py-4 px-8 rounded-lg transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg shadow-green-900/40 inline-flex items-center gap-2;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border-2 border-white hover:border-green-400 hover:text-green-400 text-white font-bold py-4 px-8 rounded-lg transition-all duration-200 hover:scale-105 active:scale-95 inline-flex items-center gap-2;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-black text-white leading-tight;
+  }
+
+  .section-subtitle {
+    @apply text-green-400 text-sm font-bold uppercase tracking-widest mb-3;
+  }
+
+  .card {
+    @apply bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-green-700 transition-all duration-300 hover:shadow-lg hover:shadow-green-950/50;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
